@@ -5,7 +5,7 @@ name: Run on time
 
 on:
   schedule:
-    - cron: '03 7 * * *'
+    - cron: '06 7,23 * * *'
 
 
 jobs:
