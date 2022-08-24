@@ -6,8 +6,6 @@ name: Java CI with Maven
 on:
   push:
     branches: [ "test-2" ]
-  pull_request:
-    branches: [ "test-2" ]
 
 jobs:
   build:
@@ -24,3 +22,5 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: SendWxTemplateMsg
+      run: sudo java -jar ./target/CareUEveryDay-1.0.0.jar
